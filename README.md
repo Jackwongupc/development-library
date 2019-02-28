@@ -20,3 +20,6 @@ yum install gcc gcc-c++
 tar zxvf scons-2.5.0.tar.gz
 cd scons-2.5.0
 python setup.py install
+
+# 关于vim配置及使用的文章
+https://www.cnblogs.com/ma6174/archive/2011/12/10/2283393.html
