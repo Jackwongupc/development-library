@@ -38,5 +38,19 @@ tar zxvf scons-2.5.0.tar.gz
 cd scons-2.5.0
 python setup.py install
 
+# blade BUILD文件使用系统库
+cc_binary(
+    name = 'writer',
+    srcs = [
+        'writer.cc',
+    ],
+    deps = [
+        "./:lm.helloworld.pb",
+        "#pthread",
+        "#protobuf",
+    ],
+)
+对于线程库和protobuf库的使用，使用"#xxx"，对于使用自己编译的库则选择其所在的路径并以冒号":xxx"书写；
+
 # 关于vim配置及使用的文章
 https://www.cnblogs.com/ma6174/archive/2011/12/10/2283393.html
